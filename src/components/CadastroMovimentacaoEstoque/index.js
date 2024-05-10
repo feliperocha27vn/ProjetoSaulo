@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "../Slider";
-import Campos from "../Campos";
 import Botoes from "../Botoes";
 import Titulo from "../Titulo";
 
@@ -13,13 +12,83 @@ function CadastroMovimentacaoEstoque() {
           <Titulo label="Contas a Receber" />
           <div className="w-full h-[370px] overflow-auto">
             <div className="grid grid-rows-3 grid-cols-4 grid-flow-col gap-x-[45rem]">
-              <Campos label="Código Produto: " />
-              <Campos label="Data: " />
-              <Campos label="Tipo: " />
-              <Campos label="Quantidade: " />
-              <Campos label="Código Fornecedor: " />
-              <Campos label="Código Cliente: " />
-              <Campos label="Motivo: " />
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Cód. Produto:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="id_produto"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Data:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="data"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Tipo:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="tipo"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Quantidade
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="quantidade"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Cód. Fornecedor:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="id_fornecedor"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Cód. Cliente:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="id_cliente"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Motivo:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="motivo"
+                />
+              </div>
             </div>
           </div>
           <Botoes />

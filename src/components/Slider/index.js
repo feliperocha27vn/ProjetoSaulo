@@ -53,7 +53,7 @@ const Slider = () => {
       {icones.map((item) => (
         <SwiperSlide className="bg-emerald-700">
           <div className="flex flex-col gap-0.5">
-            <FontAwesomeIcon icon={item.icone} className="h-20" />
+            <FontAwesomeIcon icon={item.icone} key={icones.icone} className="h-20" />
             <label className="text-white font-bold">{item.rotulo}</label>
           </div>
         </SwiperSlide>

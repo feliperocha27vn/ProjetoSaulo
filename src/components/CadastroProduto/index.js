@@ -1,5 +1,4 @@
 import Botoes from "../Botoes";
-import Campos from "../Campos";
 import Slider from "../Slider";
 import Titulo from "../Titulo";
 
@@ -12,11 +11,38 @@ function CadastroProduto() {
           <Titulo label="Produtos" />
           <div className="w-full h-[370px]">
             <div className="grid grid-rows-3 grid-cols-4 grid-flow-col gap-x-[45rem]">
-              <Campos label="Descrição Produto: " />
-              <Campos label="ID Categoria: " />
-              <Campos label="ID Tabela: "/>
-              <div>
-                <Campos label="ID Estoque: " />
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Descrição:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="nome_fornecedor"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Categoria:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="id_categoria"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Tabela:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="id_tabela"
+                />
               </div>
             </div>
           </div>

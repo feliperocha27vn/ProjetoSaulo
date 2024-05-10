@@ -1,7 +1,7 @@
 import Slider from "../Slider";
-import Campos from "../Campos";
 import Titulo from "../Titulo";
 import Botoes from "../Botoes";
+import "../Campo.css";
 
 function CadastroCategoria() {
   return (
@@ -12,7 +12,17 @@ function CadastroCategoria() {
           <Titulo label="Cidades" />
           <div className="w-full h-[370px]">
             <div className="grid grid-rows-3 grid-cols-4 grid-flow-col gap-x-[45rem]">
-              <Campos label="Categoria: " />
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Categoria:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="categoria"
+                />
+              </div>
             </div>
           </div>
           <Botoes />

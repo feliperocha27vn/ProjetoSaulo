@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "../Slider";
 import Titulo from "../Titulo";
-import Campos from "../Campos";
 import Botoes from "../Botoes";
 
 function CadastroVendedores() {
@@ -13,9 +12,39 @@ function CadastroVendedores() {
           <Titulo label="Vendedores" />
           <div className="w-full h-[370px]">
             <div className="grid grid-rows-3 grid-cols-4 grid-flow-col h-72">
-              <Campos label="Nome: " />
-              <Campos label="ID Perfil Usuário: " />
-              <Campos label="Comissão: " />
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Nome:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="nome_vendedor"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    ID Perfil Usário:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="id_perfilUsuario"
+                />
+              </div>
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Comissão
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="valor_comissao"
+                />
+              </div>
             </div>
           </div>
           <Botoes />

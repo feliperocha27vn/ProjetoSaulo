@@ -1,5 +1,4 @@
 import Botoes from "../Botoes";
-import Campos from "../Campos";
 import Slider from "../Slider";
 import Titulo from "../Titulo";
 
@@ -12,10 +11,20 @@ function CadastroTelefone() {
           <Titulo label="Produtos" />
           <div className="w-full h-[370px]">
             <div className="grid grid-rows-3 grid-cols-4 grid-flow-col gap-x-[45rem]">
-              <Campos label="Número: " />
+              <div className="grid grid-row-1 grid-cols-2 content-center p-6 gap-x-60">
+                <div className="w-[230px]">
+                  <label className="text-3xl text-white font-bold campo">
+                    Número:
+                  </label>
+                </div>
+                <input
+                  className="bg-white rounded-xl w-[350px] h-10 p-2 shadow-md shadow-black"
+                  id="numero_telefone"
+                />
+              </div>
             </div>
           </div>
-          <Botoes/>
+          <Botoes />
         </div>
       </div>
     </div>
