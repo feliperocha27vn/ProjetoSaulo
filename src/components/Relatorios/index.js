@@ -7,6 +7,8 @@ import {
   faCartShopping,
   faCartFlatbedSuitcase,
 } from "@fortawesome/free-solid-svg-icons";
+import BotaoHome from "../BotaoHome";
+
 
 const icons = [
   { icone: faHandHoldingDollar, descricao: "Contas" },
@@ -38,6 +40,7 @@ function Relatorios() {
           </div>
         </div>
       </div>
+      <BotaoHome />
     </div>
   );
 }

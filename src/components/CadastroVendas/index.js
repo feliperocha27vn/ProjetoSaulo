@@ -1,6 +1,7 @@
 import Slider from "../Slider";
 import Titulo from "../Titulo";
-import Botoes from "../Botoes";
+import BotaoHome from "../BotaoHome";
+
 
 function CadastroVendas() {
   return (
@@ -68,9 +69,17 @@ function CadastroVendas() {
               </div>
             </div>
           </div>
-          <Botoes />
+          <div className="flex items-end justify-evenly">
+            <button className="border-2 border-black bg-lime-600 rounded-2xl w-60 flex justify-center">
+              <div className="text-white text-2xl p-0.5">Cadastrar</div>
+            </button>
+            <button className="border-2 border-black bg-red-600 rounded-2xl w-60 flex justify-center">
+              <div className="text-white text-2xl p-0.5">Cancelar</div>
+            </button>
+          </div>
         </div>
       </div>
+      <BotaoHome />
     </div>
   );
 }
