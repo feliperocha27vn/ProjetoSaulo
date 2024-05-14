@@ -1,3 +1,4 @@
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -5,6 +6,8 @@ import "../../styles.css";
 import { Grid, Navigation } from "swiper/modules";
 import { Pagination } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+
 import {
   faBoxesStacked,
   faCity,
@@ -17,45 +20,44 @@ import {
   faStore,
   faTruck,
   faTruckRampBox,
-} 
-from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons";
 
 const icones = [
-  { icone: faStore, rotulo: 'Cadastro de Fornecedores' },
-  { icone: faTruck, rotulo: 'Cadastro de Vendedores' },
-  { icone: faPeopleGroup, rotulo: 'Cadastro de Clientes' },
-  { icone: faBoxesStacked, rotulo: 'Cadastro de Vendas' },
-  { icone: faCity, rotulo: 'Cadastro de Cidades' },
-  { icone: faDolly, rotulo: 'Cadastro de Produtos' },
-  { icone: faList, rotulo: 'Cadastro de Categorias' },
-  { icone: faPhone, rotulo: 'Cadastro de Telefones' },
-  { icone: faHandHoldingDollar, rotulo: 'Cadastro de Contas' },
-  { icone: faTruckRampBox, rotulo: 'Cadastro de Movimentação' },
-  { icone: faPrint, rotulo: 'Relatórios' },
+  { icone: faStore, rota: '/CadastroFornecedor', rotulo: 'Cadastro de Fornecedores' },
+  { icone: faTruck, rota: '/CadastroVendedores', rotulo: 'Cadastro de Vendedores' },
+  { icone: faPeopleGroup, rota: '/CadastroClientes', rotulo: 'Cadastro de Clientes' },
+  { icone: faBoxesStacked, rota: '/CadastroVendas', rotulo: 'Cadastro de Vendas' },
+  { icone: faCity, rota: '/CadastroCidades', rotulo: 'Cadastro de Cidades' },
+  { icone: faDolly, rota: '/CadastroProdutos', rotulo: 'Cadastro de Produtos' },
+  { icone: faList, rota: '/CadastroCategorias', rotulo: 'Cadastro de Categorias' },
+  { icone: faPhone, rota: '/CadastroTelefones', rotulo: 'Cadastro de Telefones' },
+  { icone: faHandHoldingDollar, rota: '/CadastroContas', rotulo: 'Cadastro de Contas' },
+  { icone: faTruckRampBox, rota: '/CadastroMovimentacao', rotulo: 'Cadastro de Movimentação' },
+  { icone: faPrint, rota: '/Relatorios', rotulo: 'Relatórios' },
 ];
 
 const Slider = () => {
   return (
     <Swiper
-        navigation={true}
-        loop={true}
-        slidesPerView={4}
-        grid={{
-          rows: 1,
-        }}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Grid, Pagination, Navigation]}
-        className="mySwiper h-28"
-      >
-      {icones.map((item) => (
-        <SwiperSlide className="bg-emerald-700">
-          <div className="flex flex-col gap-0.5">
-            <FontAwesomeIcon icon={item.icone} key={icones.icone} className="h-20" />
+      navigation={true}
+      loop={true}
+      slidesPerView={4}
+      grid={{
+        rows: 1,
+      }}
+      spaceBetween={30}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Grid, Pagination, Navigation]}
+      className="mySwiper h-28"
+    >
+      {icones.map((item, index) => (
+        <SwiperSlide key={index} className="bg-emerald-700">
+          <Link to={item.rota} className="flex flex-col gap-0.5">
+            <FontAwesomeIcon icon={item.icone} className="h-20" />
             <label className="text-white font-bold">{item.rotulo}</label>
-          </div>
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
